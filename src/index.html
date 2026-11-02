@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080f1c">
+  <meta name="description" content="蓝色小肥鱼的本地 3D Agent 房间：观察、规划与行动。">
+  <title>小肥鱼的房间</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <main class="app">
+    <section id="stage" class="no-perception" aria-label="可旋转的三维卧室">
+      <div class="stage-heading"><h1>小肥鱼的房间</h1><span>蓝色夜晚，慢慢来。</span></div>
+      <nav class="camera-controls" aria-label="切换视角">
+        <button data-camera="room" aria-pressed="true">房间</button>
+        <button data-camera="bed" aria-pressed="false">床边</button>
+        <button data-camera="follow" aria-pressed="false">跟随</button>
+        <button data-camera="first" aria-pressed="false" title="空闲时朝向房内，拖动画面可以转身">角色视角</button>
+      </nav>
+      <div id="loading" role="status"><div class="loader"></div><strong id="loading-title">正在布置房间</strong><p id="loading-text">载入房间与小肥鱼…</p><button id="reload" hidden>重新加载</button></div>
+      <div id="speech" aria-live="polite"><span>小肥鱼</span><p id="speech-text">你好，我已经到房间里了。先陪我走走吧。</p></div>
+      <div id="perception" hidden><div class="perception-caption">她看到的房间 <span>虚拟摄像机</span></div><canvas id="eye-view" width="320" height="180" aria-label="角色第一人称画面"></canvas></div>
+      <div class="stage-footer"><span id="camera-hint">拖动旋转 · 滚轮缩放 · 双击地面走过去</span><button id="home-camera" title="恢复房间视角">恢复视角</button></div>
+    </section>
+    <aside class="sidebar" aria-label="角色与 Agent 控制">
+      <header class="character-header"><div><h2>蓝色小肥鱼</h2><p id="activity">正在醒来…</p></div><span class="status-dot" id="activity-dot" aria-hidden="true"></span></header>
+      <div class="connection-status"><span id="mode">手动控制</span><button id="connect-shortcut">连接模型</button></div>
+      <section class="actions" aria-labelledby="actions-title"><h3 id="actions-title">先试试动作</h3>
+        <div class="action-grid"><button data-action="window">看窗外</button><button data-action="desk">去桌前</button><button data-action="user">看向我</button><button data-action="wave">挥挥手</button><button data-action="bed">去床边</button><button data-action="lamp" id="lamp-button">打开台灯</button><button data-action="jump" id="jump-button">跳上床</button></div>
+        <div class="transport"><button id="pause" aria-pressed="false">暂停</button><button id="stop">停止行动</button><button id="reset">重置</button></div>
+      </section>
+      <section class="posture-controls" aria-label="床上姿势预览"><h3>床上姿势</h3><div><button data-posture="lie">躺下</button><button data-posture="phone">看手机</button><button data-posture="sit">坐床边</button></div></section>
+      <form id="command-form" class="command-form"><label for="command">和她说点什么</label><div class="command-field"><textarea id="command" rows="2" maxlength="600" placeholder="跳上床看看，再跳下来向我挥手" required></textarea><button id="send" type="submit" title="发送指令" aria-label="发送指令"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 12 7-7 7 7M12 5v15"/></svg></button></div><p id="command-help">连接模型后，可以用一句话安排多个动作。</p></form>
+      <details id="bridge-settings"><summary>联动其他 Agent</summary><form id="bridge-form"><label for="bridge-source">状态来源</label><select id="bridge-source"><option value="manual">手动预览</option><option value="qq">QQ Agent 项目</option><option value="external">DeepSeek / 通用 harness</option></select><label for="bridge-session">跟随的会话</label><input id="bridge-session" placeholder="从 Agent 的“3D 房间”入口自动填写" spellcheck="false"><div class="settings-buttons"><button type="submit">连接联动</button><button id="bridge-disconnect" type="button">断开</button></div><p id="bridge-state" role="status">未联动，可以预览姿势。</p><p class="field-help">QQ 测试对话中的“3D 房间”会打开同一会话；通用 harness 使用事件适配器。</p></form></details>
+      <label class="toggle-row"><span>让她自己活动<small id="auto-description">未连接时使用离线漫游</small></span><input type="checkbox" id="autonomy" role="switch"></label>
+      <section class="journal" aria-labelledby="journal-title"><div class="section-heading"><h3 id="journal-title">行动记录</h3><button id="clear-log">清空</button></div><ol id="log" aria-live="polite" aria-relevant="additions"></ol></section>
+      <details id="settings"><summary>模型连接设置 <span id="connection-label">未配置</span></summary>
+        <form id="config-form"><label for="base-url">接口地址</label><input id="base-url" type="url" value="https://api.deepseek.com/v1" required spellcheck="false" autocomplete="url"><p class="field-help">本地模型可填 http://127.0.0.1:1234/v1</p>
+          <label for="model-name">模型名称</label><input id="model-name" placeholder="填写服务提供的模型 ID" required spellcheck="false">
+          <label for="api-key">API Key</label><input id="api-key" type="password" placeholder="本地模型可留空" autocomplete="off">
+          <label class="checkbox-label"><input type="checkbox" id="vision">向模型发送角色视角截图</label><p class="field-help">仅为支持图片输入的模型开启。默认只发送场景状态。</p>
+          <div class="settings-buttons"><button type="submit" id="save-config">应用设置</button><button type="button" id="test-config">测试连接</button></div><p id="config-result" role="status">密钥只保存在当前本地服务的内存中。</p>
+        </form>
+      </details>
+      <details class="view-settings"><summary>画面与调试</summary><label class="checkbox-label"><input id="show-perception" type="checkbox">显示角色视角小窗</label><label class="checkbox-label"><input id="show-nav" type="checkbox">显示碰撞边界</label><p id="performance">正在测量帧率</p></details>
+      <footer class="credits">角色：木子恶魔 · 仅在本地读取原 VRM<br><span>动作由程序与骨骼 IK 驱动，支持床上姿势与手机拿放。</span></footer>
+    </aside>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

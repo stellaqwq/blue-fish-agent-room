@@ -1,0 +1,9 @@
+# DeepSeek Harness overlay. Start the room first; the plugin reads its local
+# .local/bridge-token.txt automatically. This never changes Agent tool grants.
+- insert:
+  - id: blue-fish-room
+    name: './adapters/deepseek-room.mjs'
+    config:
+      roomSession: deepseek-room
+      # Optional: select one existing Harness session instead of the first live one.
+      # sessionId: your-harness-session-id

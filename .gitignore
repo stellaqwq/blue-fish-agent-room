@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.local/
+.impeccable/
+*.log
+*.vrm
+*.blend
+*.blend1
+*.zip
+*.br

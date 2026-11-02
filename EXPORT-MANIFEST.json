@@ -1,0 +1,331 @@
+{
+  "format": 1,
+  "repository": "stellaqwq/blue-fish-agent-room",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 753,
+      "sha256": "d67bad9d592169a12b4cc9fb5ff2eaf9febb7da7449fe5dd4a14b13cd9897006"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 31,
+      "sha256": "413095ed4134ef709526fd636f570af9ec3e73c5aad0d7d54d95da717bc1b9b2"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 107,
+      "sha256": "727c5e5fd5b11f7eaa3c5e7c98595ec174447e482be951877fee88e5ce2e84fd"
+    },
+    {
+      "path": "AGENT-INTEGRATION.md",
+      "bytes": 6735,
+      "sha256": "edf1e940d1c763c85e5d91240f5b8771227c6e987222630018225aea66ae96a0"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 12108,
+      "sha256": "f9eb913b6c1dbd24ae3101f2b7190ade9654159dfe3c36eed831aa527e0ce70a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3370,
+      "sha256": "7b1ea833dd726a61b46f20da709c7788aef3b8643200c9bdaac91ad9ef02eb72"
+    },
+    {
+      "path": "SKILLS.md",
+      "bytes": 6725,
+      "sha256": "fa9ef59a972ccfc50b27217cbf40f41a6c16b1c10ed983da68a3772c723a0031"
+    },
+    {
+      "path": "THIRD-PARTY.md",
+      "bytes": 838,
+      "sha256": "e697b5a2a3d1d978b833f2aff9853f8cfc1c07679a78a307a02949e293f39f9a"
+    },
+    {
+      "path": "adapters/deepseek-room.mjs",
+      "bytes": 2986,
+      "sha256": "7588fa9e84e50720dcf5c0ff04a783d1e2d54e24596e8a1f198a0caa2bec0ed6"
+    },
+    {
+      "path": "adapters/deepseek-room.patch.yml",
+      "bytes": 403,
+      "sha256": "a9a47780deafe6171dac963b1746df062d1dc5eec618bb710d2a222c1c643cc2"
+    },
+    {
+      "path": "bridge.mjs",
+      "bytes": 4465,
+      "sha256": "1e541adef90b4a2dd4e0e49171f0eea4269994cc67524cf48bc3d6fcc94c45ad"
+    },
+    {
+      "path": "http-utils.mjs",
+      "bytes": 6120,
+      "sha256": "6fc8c469f22cb0ebfc8509ef4481a6607af0928c341db66fde253a0905099626"
+    },
+    {
+      "path": "model-client.mjs",
+      "bytes": 6221,
+      "sha256": "b578edcd1095ff5f83123c3380a82acee613671835a31fbc80b151e326ba2018"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 22410,
+      "sha256": "0f5e9f5cb6d35b24719d5b7da0184b6220813a24c3c9fe18d85f77685a4ba442"
+    },
+    {
+      "path": "package.json",
+      "bytes": 533,
+      "sha256": "406293f66588aace202f8edfea5759987fa97e1143aa2680f84f0add1f90c77d"
+    },
+    {
+      "path": "public/assets/room-info.json",
+      "bytes": 1142,
+      "sha256": "9278ef82f693dc8e8e4df3eefcb6b8037c63d0a15908c91bcfa69eea43ce6838"
+    },
+    {
+      "path": "public/assets/room.glb",
+      "bytes": 21402624,
+      "sha256": "1cd6a1c449f587d0a1c9dfbf0ebf71976fb2daa1be2f232ee04e6bdd8f0afc62"
+    },
+    {
+      "path": "public/third-party/Rapier-LICENSE.txt",
+      "bytes": 11343,
+      "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+    },
+    {
+      "path": "restart-room.ps1",
+      "bytes": 169,
+      "sha256": "d55e536a6bae1e974931a81a4daedbf953b91bad3facce24d4c08f2e3c242aec"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 1034,
+      "sha256": "850890e50b8ec17ecd3bb18175184aff1dacf23b25ba27801033924136c32ca8"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "bytes": 521,
+      "sha256": "f49bbe1f8fe473017377660340df9a839c2071b11944436c2262068098364c4c"
+    },
+    {
+      "path": "scripts/export-room.py",
+      "bytes": 2879,
+      "sha256": "ea8adedd673891cdbeef871b61382daf53a253842dd766056b9fea865701ccff"
+    },
+    {
+      "path": "scripts/inspect-bed.mjs",
+      "bytes": 2320,
+      "sha256": "8070cbff054aa4b629f4a2524e6f8c34edf4c873f4d3d3828805ef326b9e0196"
+    },
+    {
+      "path": "scripts/inspect-collision.mjs",
+      "bytes": 1863,
+      "sha256": "5448bb79856785f4fb0d837d71c2ad92f63ec58e6c7dc3fcf14206e7a7f0465c"
+    },
+    {
+      "path": "scripts/pose-search.mjs",
+      "bytes": 1513,
+      "sha256": "3de52af77050711aeea19837705b23b31226edc2db269eab209edb24c2b0ddc1"
+    },
+    {
+      "path": "scripts/qa-game-jump.mjs",
+      "bytes": 6316,
+      "sha256": "18213484c4423282cf3f095ec3d904627f4676022eba011d4aa166e1982d0b09"
+    },
+    {
+      "path": "scripts/qa-hands.mjs",
+      "bytes": 3564,
+      "sha256": "bf8f998fc330da3dfa19ae4a4dfc00acb74bc29042fc8b9abb1768536fa243ba"
+    },
+    {
+      "path": "scripts/qa-http.mjs",
+      "bytes": 567,
+      "sha256": "82a251df3a894861b06126837bc0a34c11f8a6d3109d1e6fb3211cb432a10ef6"
+    },
+    {
+      "path": "scripts/qa-integration.mjs",
+      "bytes": 7184,
+      "sha256": "91f18c64adffc96d2e12911a5a60c6cd0091a9f9f46bb1f9bca4e016c2f6d805"
+    },
+    {
+      "path": "scripts/qa-model.mjs",
+      "bytes": 4437,
+      "sha256": "03b76ec7eb75f25561fb4e5c2bda28f60858d825adc5ac1c0e3088626d16efcd"
+    },
+    {
+      "path": "scripts/qa-poses.mjs",
+      "bytes": 5073,
+      "sha256": "9812a39463166ddc08a8a63d9bf4218cc0142e577334439bca7447b6947c8f85"
+    },
+    {
+      "path": "scripts/qa-reset-hair.mjs",
+      "bytes": 5843,
+      "sha256": "c492979f4410acbc403aaf46c0626af5aebb2f92ba58d4877a1aa4f9699d5b8f"
+    },
+    {
+      "path": "scripts/qa-review.mjs",
+      "bytes": 3417,
+      "sha256": "f83e614bc76b468a78b107707506a2e32e9cec6e530f3783f6f608eae009b513"
+    },
+    {
+      "path": "scripts/qa-skills.mjs",
+      "bytes": 12581,
+      "sha256": "013e9625f3a19187883347e3cc0865578cc37631a8aa7ea94b2a62e5a38e308f"
+    },
+    {
+      "path": "scripts/qa.mjs",
+      "bytes": 12377,
+      "sha256": "b949690f81143dedef2653812d00e4310fc7ea5f6025f943590a06cfa301646d"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 9596,
+      "sha256": "16fbee2a4cc4051fb7f15105172a9ffcbefbbf8b87f46dbc585f709be049b2c9"
+    },
+    {
+      "path": "src/agent.js",
+      "bytes": 24153,
+      "sha256": "f993cd6314ab81c885b450245809f45747995255a5f5fb3e0278f90a58804ff6"
+    },
+    {
+      "path": "src/avatar.js",
+      "bytes": 13636,
+      "sha256": "2ef77c032f8725f89e49b550f6b328cbeb81e826cfe65add908990e4ea615977"
+    },
+    {
+      "path": "src/bridge-client.js",
+      "bytes": 3336,
+      "sha256": "6ff963ee92877d67b4b5b24d9ed4ddf4eb38cfb420e90d4680365aa309b9fa31"
+    },
+    {
+      "path": "src/cognition.js",
+      "bytes": 6557,
+      "sha256": "c508706a80f41a5eb0b14b514056ef58839b302271b2b9eef7b2d4e90e1fa8bf"
+    },
+    {
+      "path": "src/director.js",
+      "bytes": 8799,
+      "sha256": "d4358986bd08fd4af9d98872ed7105dd69d869371172bafbbd65bf305194bf63"
+    },
+    {
+      "path": "src/frame-guard.js",
+      "bytes": 238,
+      "sha256": "acb273ac4e2b3b61d444a22ddb503a05299c8175a699ba30454b6926da1156bd"
+    },
+    {
+      "path": "src/goals.js",
+      "bytes": 4007,
+      "sha256": "96b16e290e1ee98c9796eaadc72948e505b7d33bd9fbf3252c3f16145283f258"
+    },
+    {
+      "path": "src/index.html",
+      "bytes": 6761,
+      "sha256": "aa81b18ca61aa477c87da2241a5f4d514d5a446528ea144ae435469e0de24e2e"
+    },
+    {
+      "path": "src/jump.js",
+      "bytes": 6738,
+      "sha256": "9dc5666887aedd47c3288d2f32a0beb0b2f062ad704932dc5cfdd7a44f86f539"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 17446,
+      "sha256": "6dd3ab4d6031d7e4e9c0cba45a35d33eabf66a72422566d1514dfb10585d631c"
+    },
+    {
+      "path": "src/nav.js",
+      "bytes": 2886,
+      "sha256": "d73c2fefa6d6b634e48872a6e6d4f4fe69d82e3e3208c08da32f8612d90d211f"
+    },
+    {
+      "path": "src/physics.js",
+      "bytes": 4214,
+      "sha256": "59799c852f72b9bcf47b9360d26c4b19c20d6fc34638ae849c5cb40615268be7"
+    },
+    {
+      "path": "src/protocol.js",
+      "bytes": 9377,
+      "sha256": "f977b18c6f33f5b6aa744369f2815932159ba221e9fe1f8fe47ae23fecb1f751"
+    },
+    {
+      "path": "src/rig-tail.js",
+      "bytes": 2394,
+      "sha256": "363460930146bb03173b0013aa446cb6b0b6bcf19bb3c2e2c6db51060862fe5b"
+    },
+    {
+      "path": "src/room-layout.js",
+      "bytes": 5497,
+      "sha256": "aa0d038761b613c0bdac1bb2e4efa2c6af456f1045b1edff50d2fc2e9aa808e0"
+    },
+    {
+      "path": "src/skills.js",
+      "bytes": 5841,
+      "sha256": "fd7c91b282be056860da645911e9fcc3b1ef6e95f90fce66e2c4f6110e2426f2"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 9503,
+      "sha256": "498c4eadf0cd06cfbc491e7e97f979c723a104a4706a3fb3c3069bfbb107ca26"
+    },
+    {
+      "path": "src/world.js",
+      "bytes": 7243,
+      "sha256": "7ef75e648f23a44548111e040b5ef3278b92c856d7c01b56a753c1fb156c5288"
+    },
+    {
+      "path": "start-room.ps1",
+      "bytes": 1691,
+      "sha256": "93b15b1799bacabe1d05e80a24805480c516f537648c2a33248c774c52facbee"
+    },
+    {
+      "path": "stop-room.ps1",
+      "bytes": 544,
+      "sha256": "107cc0b43b711a1551a42da3b42c62aedeb7c333f64b4704faedbecb06d312ef"
+    },
+    {
+      "path": "tests/behavior.test.mjs",
+      "bytes": 8201,
+      "sha256": "b0088523d5fd450852a7519e1f148f0e78ab4224477955bd1ed92e56f705c9ca"
+    },
+    {
+      "path": "tests/bridge.test.mjs",
+      "bytes": 2990,
+      "sha256": "ef47b255a94ef6de36ca68d17135beff7f1f75983bed54d62c4cdb6488e799ba"
+    },
+    {
+      "path": "tests/cognition.test.mjs",
+      "bytes": 14621,
+      "sha256": "5f1b1f5a083f10f5c5c7d950aa906994e91c1c94333f28dce71a56bf8366d81d"
+    },
+    {
+      "path": "tests/http.test.mjs",
+      "bytes": 7299,
+      "sha256": "7aa1f83b28a1b1f185e865a0da058bd6590a167b75f8cbc0ea13a76b664497da"
+    },
+    {
+      "path": "tests/jump-collision.test.mjs",
+      "bytes": 2152,
+      "sha256": "f0532cd16740dff001f879eb69d6a5f8c43293634772fe6b94cfdfd19057dedd"
+    },
+    {
+      "path": "tests/model-client.test.mjs",
+      "bytes": 6503,
+      "sha256": "89e974e972479242e07aac0b18ee216f3849a8957d3080245ea93baca15f0905"
+    },
+    {
+      "path": "关闭房间.cmd",
+      "bytes": 87,
+      "sha256": "22184ded19acaf4716fcbadf8c2141ac2b21d89744e2c57a521afe1bf31b4d25"
+    },
+    {
+      "path": "启动房间.cmd",
+      "bytes": 88,
+      "sha256": "34d789d4c48420931e7dd015b8a8d3bf321be07b092ecd7ebc719152ff534285"
+    },
+    {
+      "path": "重启房间.cmd",
+      "bytes": 90,
+      "sha256": "105ecc49019da2d54665d618971fae2cad59c686791f9592b4ee3c4464aaaadf"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "blue-fish-agent-room",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "build:debug": "node scripts/build.mjs --debug"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "0.21.0",
+    "@pixiv/three-vrm": "3.5.5",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "playwright-core": "1.64.1"
+  }
+}
